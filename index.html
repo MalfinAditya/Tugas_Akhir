@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="mtk.css">
+    <title>Matematika</title>
+</head>
+<body>
+    <div class="popup">
+        <div class="popupisi">
+            <h2>Matematika</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, quisquam molestiae mollitia voluptatum beatae delectus quas earum facere officiis architecto ullam, necessitatibus maiores. Consequuntur quas repellendus quidem deleniti molestias voluptatum.</p>
+        </div>
+    </div>
+
+    <!-- Welcome Screen -->
+    <div class="welcome-screen" id="welcome">
+        <h1>MATEMATIKA</h1>
+        <button onclick="enterPortfolio()">Jelajahi</button> <!-- Tombol untuk masuk -->
+    </div>
+
+    <div class="header">
+        <a href="/index.html">
+            <h2>Matematika</h2>
+        </a>
+        <div class="navbar">
+            <a href="/menu project/mtk.html">Home</a>
+            <a href="#" class="open-popup">About</a>
+        </div>
+    </div>
+    <div class="isi">
+        <div class="section1">
+            <img src="/img/thumnai.png" alt="mtk">
+            <h1>Operasi Bilangan</h1>
+            <p>Operasi Bilangan adalah proses atau langkah matematika yang digunakan untuk memanipulasi dan menghitung angka dalam berbagai bentuk. Operasi ini melibatkan tindakan dasar seperti penjumlahan, pengurangan, perkalian, dan pembagian.</p>
+            <a href="/hitung/stylehitung/op-bilangan.html">
+                <button>MAINKAN</button>
+            </a>
+        </div>
+        <div class="section1">
+            <img src="/img/thumnai.png" alt="mtk">
+            <h1>Keliling Bangun Datar</h1>
+            <p>Keliling Bangun Datar adalah total panjang seluruh sisi yang mengelilingi suatu bangun datar. Dengan kata lain, keliling adalah jumlah dari semua sisi suatu bentuk geometris dua dimensi.</p>
+            <a href="/hitung/keliling/pilih-keliling.html">
+                <button>MAINKAN</button>
+            </a>
+        </div>
+        <div class="section1">
+            <img src="/img/thumnai.png" alt="mtk">
+            <h1>Konversi</h1>
+            <p>Konversi adalah proses mengubah suatu nilai atau satuan dari bentuk atau sistem tertentu ke bentuk atau sistem lain yang setara. Dalam konteks matematika dan fisika, konversi sering digunakan untuk mengubah satuan ukuran seperti panjang, berat, waktu, suhu, dan volume.</p>
+            <a href="/hitung/konverter/konver.html">
+                <button>MAINKAN</button>
+            </a>
+        </div>
+        <div class="section1">
+            <img src="/img/thumnai.png" alt="mtk">
+            <h1>Coming Soon</h1>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptates sit exercitationem itaque ut! Debitis eos quod ea, ut mollitia quia quidem? Eaque reprehenderit fugit id ea suscipit, voluptates voluptatum nesciunt.</p>
+            <a href="#">
+                <button>MAINKAN</button>
+            </a>
+        </div>
+    </div>
+
+    <script>
+        // Fungsi untuk masuk ke portofolio dengan efek fade out
+        function enterPortfolio() {
+              const welcomeScreen = document.getElementById('welcome');
+              const content = document.getElementById('content');
+  
+              // Tambahkan kelas 'fade-out' untuk efek memudar
+              welcomeScreen.classList.add('fade-out');
+  
+              // Tunggu hingga animasi selesai sebelum menyembunyikan welcome screen
+              setTimeout(() => {
+                  welcomeScreen.style.display = 'none'; // Sembunyikan layar welcome
+                  content.style.display = 'block'; // Tampilkan konten utama
+              }, 1000); // Waktu yang sesuai dengan durasi transisi (1 detik)
+          }  
+
+        //Abouttttttttttttttttttttttttttttttttttt
+        const buka = document.querySelector('.open-popup');
+        const popup = document.querySelector('.popup');
+
+        //buka popuppp
+        buka.addEventListener('click', (e) => {
+            e.preventDefault(); //gen ora mlebu link
+            popup.style.display = 'flex';
+        })
+
+        //tutp penct ap sj
+        window.addEventListener('click', (e) =>{
+            if (e.target === popup){
+                popup.style.display = 'none'
+            }
+        })
+
+
+      </script>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pertambahan</title>
+    <link rel="stylesheet" href="aritmatika.css">
+</head>
+<body>
+    <a href="op-bilangan.html" class="kembali">
+        <button>Kembali</button>
+    </a>
+    <div class="lain">
+        <div class="card">
+            <a href="/hitung/stylehitung/tambah.html">
+                <div class="fotone">
+                    <img src="/img/Hitung dasar/tambah.png" alt="Pertambahan">
+                </div>
+            </a>
+        </div>
+        <div class="card">
+            <a href="/hitung/stylehitung/kurang.html">
+                <div class="fotone">
+                    <img src="/img/Hitung dasar/kurang.png" alt="Pengurangan">
+                </div>
+            </a>
+        </div>
+        <div class="card">
+            <a href="/hitung/stylehitung/kali.html">
+                <div class="fotone">
+                    <img src="/img/Hitung dasar/kali.png" alt="Perkalian">
+                </div>
+            </a>
+        </div>
+        <div class="card">
+            <a href="/hitung/stylehitung/bagi.html">
+                <div class="fotone">
+                    <img src="/img/Hitung dasar/bagi.png" alt="Pembagian">
+                </div>
+            </a>
+        </div>
+        <div class="card">
+            <a href="/hitung/stylehitung/modulus.html">
+                <div class="fotone">
+                    <img src="/img/Hitung dasar/modul.png" alt="Modulus">
+                </div>
+            </a>
+        </div>
+    </div>
+    <div class="container">
+        <h2>Modulus</h2>
+        <div class="input">
+            <label for="angka1">Massukan Angka</label>
+            <input type="number" id="angka1">
+            <label for="angka1">Massukan Angka</label>
+            <input type="number" id="angka2">
+        </div>
+        <div class="button">
+            <input type="button" id="btn" onclick="addNumbers()" value="Hitung">
+        </div>
+        <br>
+        <div class="hasil">
+            <p> Hasil : <br><span id="hasil">?</span></p>
+        </div>
+    </div>
+
+    <script>
+        function addNumbers() {
+            //ambil nilai dari input
+            num1 = document.getElementById('angka1').value;
+            num2 = document.getElementById('angka2').value;
+            //hitung
+            document.getElementById('hasil').innerHTML = num1 % num2;
+        }
+    </script>
+</body>
+</html>

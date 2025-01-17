@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./stylekonver/menukonver.css">
+    <title>Konversi</title>
+</head>
+<body>
+    <div class="popup">
+        <div class="popupisi">
+            <h2>Konversi</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, quisquam molestiae mollitia voluptatum beatae delectus quas earum facere officiis architecto ullam, necessitatibus maiores. Consequuntur quas repellendus quidem deleniti molestias voluptatum.</p>
+        </div>
+    </div>
+
+    <div class="header">
+        <a href="/index.html">
+            <h2>Matematika</h2>
+        </a>
+        <div class="navbar">
+            <a href="/index.html">Home</a>
+            <a href="#" class="open-popup">About</a>
+        </div>
+    </div>
+    <div class="teks">
+        <h1>Konversi</h1>
+        <p>Konversi adalah proses mengubah suatu bentuk, ukuran, satuan, atau nilai dari suatu sistem ke sistem lain yang setara atau memiliki makna yang sama. Konversi digunakan untuk memudahkan perbandingan, pengukuran, dan pemahaman.</p>
+        <img src="/img/pnh.png" alt="">
+    </div>
+     
+    <div class="section">
+        <div class="card">
+            <a href="/hitung/konverter/panjang.html">
+                <div class="fotone">
+                    <img src="/img/koversi/panjangmenu.png" alt="">
+                </div>
+            </a>
+            <h2>Panjang</h2>
+        </div>
+        <div class="card">
+            <a href="/hitung/konverter/berat.html">
+                <div class="fotone">
+                    <img src="/img/Hitung dasar/coming.png" alt="">
+                </div>
+            </a>
+            <h2>Coming Soon</h2>
+        </div>
+        <div class="card">
+            <a href="">
+                <div class="fotone">
+                    <img src="/img/Hitung dasar/coming.png" alt="">
+                </div>
+            </a>
+            <h2>Coming Soon</h2>
+        </div>
+        <div class="cardhidden">
+            <a href="">
+                <div class="fotone">
+                    <img src="/img/thumnai.png" alt="">
+                </div>
+            </a>
+            <h2>Coming Soon</h2>
+        </div>
+        <div class="cardhidden">
+            <a href="">
+                <div class="fotone">
+                    <img src="/img/thumnai.png" alt="">
+                </div>
+            </a>
+            <h2>Coming Soon</h2>
+        </div>               
+        <div class="cardhidden">
+            <a href="">
+                <div class="fotone">
+                    <img src="/img/thumnai.png" alt="">
+                </div>
+            </a>
+            <h2>Coming Soon</h2>
+        </div>               
+    </div>
+
+    <div class="footer">
+        <a href="/menu project/mtk.html" class="kembali" >
+            <button>Kembali</button>
+        </a>
+        <h2>Operasi Bilangan</h2>  
+        <a href="op-bilangan.html" class="kembalihidden">
+            <button>Kembali</button>
+        </a>  
+          
+    </div>
+
+    <script>
+        //Abouttttttttttttttttttttttttttttttttttt
+        const buka = document.querySelector('.open-popup');
+        const popup = document.querySelector('.popup');
+
+        //buka popuppp
+        buka.addEventListener('click', (e) => {
+            e.preventDefault(); //gen ora mlebu link
+            popup.style.display = 'flex';
+        })
+
+        //tutp penct ap sj
+        window.addEventListener('click', (e) =>{
+            if (e.target === popup){
+                popup.style.display = 'none'
+            }
+        })
+    </script>
+</body>
+</html>
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keliling Persegi Panjang</title>
+    <link rel="stylesheet" href="style keliling/keliling-persegi.css">
+    <style>
+        .container {
+            margin: 35px auto;
+        }
+    </style>
+</head>
+<body>
+    <a href="./pilih-keliling.html" class="kembali">
+        <button>Kembali</button>
+    </a>
+    <div class="lain">
+        <div class="card">
+            <a href="./keliling-persegi.html">
+                <div class="fotone">
+                    <img src="/img/keliling/persegi.png" alt="Pertambahan">
+                </div>
+            </a>
+        </div>
+        <div class="card">
+            <a href="./keliling-persegi-pjg.html">
+                <div class="fotone">
+                    <img src="/img/keliling/persegipanjang.png" alt="Pengurangan">
+                </div>
+            </a>
+        </div>
+        <div class="card">
+            <a href="./keliling-segitiga.html">
+                <div class="fotone">
+                    <img src="/img/keliling/segitiga.png" alt="Perkalian">
+                </div>
+            </a>
+        </div>
+        <div class="card">
+            <a href="./keliling-lingkaran.html">
+                <div class="fotone">
+                    <img src="/img/keliling/linkaran.png" alt="Pembagian">
+                </div>
+            </a>
+        </div>
+        <div class="card">
+            <a href="./keliling-trapesium.html">
+                <div class="fotone">
+                    <img src="/img/keliling/trapesium.png" alt="Modulus">
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <div class="lainhidden">
+        <div class="card">
+            <a href="./keliling-layanglayang.html">
+                <div class="fotone">
+                    <img src="/img/keliling/layang.png" alt="Pertambahan">
+                </div>
+            </a>
+        </div>
+        <div class="card">
+            <a href="./keliling-ketupat.html">
+                <div class="fotone">
+                    <img src="/img/keliling/ketupat.png" alt="Pengurangan">
+                </div>
+            </a>
+        </div>
+        <div class="card">
+            <a href="./keliling-jajargenjang.html">
+                <div class="fotone">
+                    <img src="/img/keliling/jajargenjang.png" alt="Perkalian">
+                </div>
+            </a>
+        </div>
+        <div class="cardhidden">
+            <a href="./keliling-lingkaran.html">
+                <div class="fotone">
+                    <img src="/img/thumnai.png" alt="Pembagian">
+                </div>
+            </a>
+        </div>
+        <div class="cardhidden">
+            <a href="/hitung/stylehitung/modulus.html">
+                <div class="fotone">
+                    <img src="/img/thumnai.png" alt="Modulus">
+                </div>
+            </a>
+        </div>
+    </div>
+
+
+    <div class="container">
+        <h2>Keliling Persegi Panjang</h2>
+        <p class="deskripsi">Keliling persegi panjang adalah total panjang seluruh sisi persegi panjang. Persegi panjang memiliki dua pasang sisi yang berlawanan, di mana sisi yang berlawanan memiliki panjang yang sama.</p>
+        <div class="input">
+            <label for="angka1">Massukan Panjang Sisi (cm) :</label>
+            <input type="text" inputmode="numeric" id="angka1">
+            <label for="angka2">Massukan Lebar Sisi (cm) :</label>
+            <input type="text" inputmode="numeric" id="angka2">
+            <p class="rumus"> Rumus : K = 2 x (p + l)</p>
+        </div>
+        <div class="button">
+            <input type="button" id="btn" onclick="addNumbers()" value="Hitung">
+        </div>
+        <br>
+        <div class="hasil">
+            <p> Keliling Persegi Panjang Adalah : <br><span id="hasil">?</span> cm</p>
+        </div>
+    </div>
+
+    <script>
+        function addNumbers() {
+            //ambil nilai dari input
+            num1 = document.getElementById('angka1').value;
+            num2 = document.getElementById('angka2').value;
+            //hitung
+            document.getElementById('hasil').innerHTML = (parseFloat(num1) + parseFloat(num2) ) * 2 ;
+        }
+    </script>
+</body>
+</html>

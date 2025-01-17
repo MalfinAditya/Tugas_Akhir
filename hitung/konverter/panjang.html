@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/hitung/konverter/stylekonver/panjang.css">
+    <style>
+        .container { 
+            margin: 35px auto;
+        }
+    </style>
+    <title>Konversi Panjang</title>
+</head>
+<body>
+    <a href="konver.html" class="kembali">
+        <button>Kembali</button>
+    </a>
+    <div class="lain">
+        <div class="card">
+            <a href="/hitung/konverter/panjang.html">
+                <div class="fotone">
+                    <img src="/img/koversi/panjang.png" alt="Panjang">
+                </div>
+            </a>
+        </div>
+        <div class="card">
+            <a href="/hitung/konverter/berat.html">
+                <div class="fotone">
+                    <img src="/img/koversi/berat.png" alt="Berat">
+                </div>
+            </a>
+        </div>
+    </div>
+    <div class="container">
+        <h2>Konversi Panjang</h2>
+        <p class="deskripsi">Konversi panjang adalah proses mengubah satuan panjang dari satu jenis ke jenis lainnya.</p>
+        <div class="input1">
+            <!--Input panjangnyaaa-->
+            <label for="inputPanjang">Massukan Panjang :</label>
+            <input type="number" id="inputLength">
+        </div>
+
+        <div class="pilihan">
+            <!--Dropdown pilih panjang awal-->
+            <label for="fromUnit">Dari :</label>
+            <select id="fromUnit">
+                <option value="mm">Milimeter (mm)</option>
+                <option value="cm">Centimeter (cm)</option>
+                <option value="dm">Desimeter (dm)</option>
+                <option value="m">Meter (m)</option>
+                <option value="dam">Dekameter (dam)</option>
+                <option value="hm">Hektometer (hm)</option>
+                <option value="km">Kilometer (km)</option>
+            </select>
+            <!--Dropdown pilih panjang akhir-->
+            <label for="toUnit">Ke :</label>
+            <select id="toUnit">
+                <option value="mm">Milimeter (mm)</option>
+                <option value="cm">Centimeter (cm)</option>
+                <option value="dm">Desimeter (dm)</option>
+                <option value="m">Meter (m)</option>
+                <option value="dam">Dekameter (dam)</option>
+                <option value="hm">Hektometer (hm)</option>
+                <option value="km">Kilometer (km)</option>
+            </select>
+
+            <!--Tombol-->
+            <div class="button">
+                <button type="button" onclick="convert()">Konversi</button>
+            </div>
+
+            <!--Hasil-->
+            <div class="hasil">
+                <h4>Hasil Konversi :</h4>
+                <p id="hasil">?</p>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        function convert() {
+            //ambil input
+            const Panjang = parseFloat(document.getElementById('inputLength').value);
+            const dariPanjang = document.getElementById('fromUnit').value;
+            const kePanjang = document.getElementById('toUnit').value;
+
+            if (isNaN(Panjang)) {
+                alert("Massukan nilai panjang!");
+                return;
+            }
+            let hasilMeter;
+
+            //convert dari satuan sumber ke metter
+            switch (dariPanjang){
+                case 'km' : hasilMeter = Panjang * 1000; break;
+                case 'hm' : hasilMeter = Panjang * 100; break;
+                case 'dam' : hasilMeter = Panjang * 10; break;
+                case 'dm' : hasilMeter = Panjang * 0.1; break;
+                case 'cm' : hasilMeter = Panjang * 0.01; break;
+                case 'mm' : hasilMeter = Panjang * 0.001; break;
+                default: hasilMeter = Panjang;
+            }
+
+            let hasilAkhir;
+            //convert dari meter ke satuan tujuan
+            switch (kePanjang){
+                case 'km' : hasilAkhir = hasilMeter / 1000; break;
+                case 'hm' : hasilAkhir = hasilMeter / 100; break;
+                case 'dam' : hasilAkhir = hasilMeter / 10; break;
+                case 'dm' : hasilAkhir = hasilMeter * 10; break;
+                case 'cm' : hasilAkhir = hasilMeter * 100; break;
+                case 'mm' : hasilAkhir = hasilMeter * 1000; break;
+                default: hasilAkhir = hasilMeter;
+            }
+
+
+            //tampilkan hasillll
+            document.getElementById('hasil').innerHTML = `${hasilAkhir.toLocaleString('id-ID')} ${kePanjang}`;
+        }
+    </script>
+</body>
+</html>
